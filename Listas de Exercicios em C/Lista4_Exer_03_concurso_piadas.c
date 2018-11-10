@@ -18,14 +18,30 @@ main(){
 	
 	for (c = 1; c <= juizes; c++){
 		printf("Juiz %d \n", c);
-		printf("Nota do candidato 1 %s: ", cand1);
-		scanf("%d", &nota);
+		do{
+			printf("Nota do candidato 1 %s: ", cand1);
+			scanf("%d", &nota);
+			if (nota < 0 || nota > 100){
+				puts("A nota deve ser entre 0 e 100.");
+			}
+		} while (nota < 0 || nota > 100);
 		notaCand1 += nota;
-		printf("Nota do candidato 2 %s: ", cand2);
-		scanf("%d", &nota);
+		do{
+			printf("Nota do candidato 2 %s: ", cand2);
+			scanf("%d", &nota);
+			if (nota < 0 || nota > 100){
+				puts("A nota deve ser entre 0 e 100.");
+			}
+		} while (nota < 0 || nota > 100);		
 		notaCand2 += nota;
-		printf("Nota do candidato 3 %s: ", cand3);
-		scanf("%d", &nota);
+		
+		do{
+			printf("Nota do candidato 3 %s: ", cand3);
+			scanf("%d", &nota);
+			if (nota < 0 || nota > 100){
+				puts("A nota deve ser entre 0 e 100.");
+			}
+		} while (nota < 0 || nota > 100);
 		notaCand3 += nota;
 		puts("");
 	}
